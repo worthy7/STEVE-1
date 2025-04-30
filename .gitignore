@@ -171,3 +171,5 @@ cython_debug/
 
 *.pkl
 *.pt
+data/dataset_contractor/*
+*.pid
