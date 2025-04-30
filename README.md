@@ -1,3 +1,36 @@
+
+## Ian Install instructions
+
+Must use linux/dev container because MineML uses MCP which expects linux. It can work on windows but it requires custom installing the MCP etc to use the correct build script and java.
+
+Get torch
+`pip3 install torch torchvision torchaudio`
+Pip needs downgrading to work proerly with old gym
+`pip install setuptools==65.5.0 pip==21`
+Get minedojo and clip
+`pip install minedojo git+https://github.com/MineDojo/MineCLIP`
+Get minerl which needs some sub module which expects linux, takes time to install because it builds java stuff
+`pip install git+https://github.com/minerllabs/minerl@v1.0.1`
+Install others and fix gym version
+`pip install gym==0.19 gym3 attrs opencv-python`
+Install the rest
+`pip install gdown tqdm accelerate==0.18.0 wandb`
+Install this package
+`pip install -e .`
+
+```
+pip install setuptools==65.5.0 pip==21
+pip3 install torch torchvision torchaudio minedojo git+https://github.com/MineDojo/MineCLIP git+https://github.com/minerllabs/minerl@v1.0.1 gym==0.19 gym3 attrs opencv-python gdown tqdm accelerate==0.18.0 wandb
+pip install -e .
+```
+
+install libs
+`sudo apt-get update && sudo apt-get install ffmpeg libsm6 libxext6  -y`
+
+
+
+## Original Readme
+
 <h2>
   <img src="data/../images/logo.PNG" alt="Logo" style="height:50px;vertical-align:middle">
   STEVE-1: A Generative Model for Text-to-Behavior in Minecraft
@@ -92,3 +125,4 @@ Please cite our paper if you find STEVE-1 useful for your research:
       primaryClass={cs.LG}
 }
 ```
+
